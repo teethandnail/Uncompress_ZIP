@@ -27,7 +27,7 @@
 }
 
 - (void)unzipAction:(id)sender {
-    NSString *unzipPassword_Key = @"xkeshiipadbackupdata_20160501";
+    NSString *unzipPassword_Key = @"123456";
     NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"xpay.zip"];
     NSString *destination = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"unzipFile"];
     
