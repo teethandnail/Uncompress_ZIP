@@ -1,7 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+pod 'SSZipArchive', '~> 1.1'
+
 target "unzip_coffee" do
 
-pod 'SSZipArchive', '~> 1.1'
+end
+
+target "mac_unzip" do
 
 end
