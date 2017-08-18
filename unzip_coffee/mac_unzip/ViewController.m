@@ -23,7 +23,7 @@
 
 - (IBAction)clickAction:(id)sender {
     NSString *path = self.textField.stringValue;
-    NSString *unzipPassword_Key = @"xkeshiipadbackupdata_20160501";
+    NSString *unzipPassword_Key = @"123456";
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         return;
     }
