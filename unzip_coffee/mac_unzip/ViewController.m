@@ -12,6 +12,7 @@
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet NSTextField *textField;
+@property (nonatomic, weak) IBOutlet NSTextField *passwordField;
 
 @end
 
@@ -23,12 +24,18 @@
 
 - (IBAction)clickAction:(id)sender {
     NSString *path = self.textField.stringValue;
-    NSString *unzipPassword_Key = @"123456";
+    NSString *unzipPassword_Key = self.passwordField.stringValue;
+    
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         return;
     }
     if (![path containsString:@".zip"]) {
         NSLog(@"无zip文件");
+        return;
+    }
+    
+    if (!unzipPassword_Key || unzipPassword_Key == 0) {
+        NSLog(@"请输入密码");
         return;
     }
     
